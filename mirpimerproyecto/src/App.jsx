@@ -2,7 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import'./index.css'
 import DatosAutor from './componentes/datosAutor'
+import Mensaje from './componentes/mensaje'
+import Botones from './componentes/botones'
 
 const App = () => {
   const tweet = 'Comenzamos con React en el módulo de Desarrollo web en entorno cliente. 2ª Evaluación';
@@ -19,17 +22,8 @@ const App = () => {
             alt="avatar" />
             <div className="content">
             <DatosAutor nombre={nombre} nick={nick} cuando={cuando} />
-             //componente mensaje
-              <div className="message" >
-                {tweet}
-              </div>    
-              //componente botones
-              <div className="buttons" >
-              <i className="fa fa-reply reply-button" />
-              <i className="fa fa-retweet retweet-button" />
-              <i className="fa fa-heart like-button" />
-              <i className="fa fa-ellipsis-h more-options-button" />
-              </div>            
+            <Mensaje tweet ={tweet}/>    
+            <Botones/>    
             </div>                
     </div>
   )

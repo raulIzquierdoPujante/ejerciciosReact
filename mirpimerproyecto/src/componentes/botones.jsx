@@ -1,6 +1,6 @@
 import React from "react";
 
-function botones(props){
+function botones(){
     return(
         <div className="buttons" >
               <i className="fa fa-reply reply-button" />
