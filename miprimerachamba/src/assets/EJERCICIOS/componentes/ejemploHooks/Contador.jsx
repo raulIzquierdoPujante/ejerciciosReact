@@ -16,7 +16,7 @@ const [contador, setContador] = useState(+props.contador) //esto se asigna una s
         <div>
             <h1>{contador}</h1>
             <button onClick={incrementarContador}>Incrementar contador</button>
-            <button onClick={resetearContador}>Reiniciar contador</button>
+            <button onClick={reiniciarContador}>Reiniciar contador</button>
         </div>
     )
 }
