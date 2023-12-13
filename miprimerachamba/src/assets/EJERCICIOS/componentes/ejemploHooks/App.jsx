@@ -6,7 +6,7 @@ import Contador from './Contador';
 function App(){
   return (
     <div>
-      <Contador contador = "0"/>
+      <Contador contador = "0" parImpar="PAR"/>
     </div>
   )
 }
