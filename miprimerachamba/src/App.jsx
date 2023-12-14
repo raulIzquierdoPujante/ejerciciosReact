@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Contador from './assets/EJERCICIOS/componentes/ejemploHooks/Contador';
+import Contador from './assets/EJERCICIOS/componentes/ejemploHooks/Ejercicio3';
 
 function App(){
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css'
 import'./index.css'
-import Contador from './Contador';
+import Contador from './ejercicio3';
 
 function App(){
   return (
