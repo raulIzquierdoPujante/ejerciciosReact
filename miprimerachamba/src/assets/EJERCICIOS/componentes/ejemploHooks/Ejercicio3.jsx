@@ -18,14 +18,43 @@ const Contador = () => {
     setContador({ ...contador, clickGreen: contador.clickGreen + 1 });
   }
 
+  function calculateSum(){
+    return contador.clickRed + contador.clickGreen + contador.clickYellow;
+  }
+
+
+  function calculateRed(){
+    return contador.clickRed / (contador.clickRed + contador.clickGreen + contador.clickYellow)*100;
+  }
+  function calculateGreen(){
+    return contador.clickGreen / (contador.clickRed + contador.clickGreen + contador.clickYellow)*100;
+  }
+  function calculateYellow(){
+    return contador.clickYellow / (contador.clickRed + contador.clickGreen + contador.clickYellow)*100;
+  }
+
 
   return (
     <div>
       <button onClick={incrementarRojo}>rojo</button>
       <button onClick={incrementarAmarillo}>amarillo</button>
       <button onClick={incrementarVerde}>verde</button>
-      
-      Contador de rojo wey {contador.clickRed}
+      <br/>
+      <br />
+      <br />
+      Pulsaciones rojo: {contador.clickRed}
+      <br />
+      Pulsaciones amarillo: {contador.clickYellow}
+      <br />
+      Pulsaciones verde: {contador.clickGreen}
+      <br />
+      Total pulsaciones: {calculateSum()}
+      <br />
+      % Rojo: {calculateRed()}%
+      <br />
+      % Verde: {calculateGreen()}%
+      <br />
+      % Amarillo: {calculateYellow()}%
     </div>
   );
 };
