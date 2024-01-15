@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import Post from './assets/EJERCICIOS/componentes/EJ12/componentes/Post'
-import { getAllPosts } from './assets/EJERCICIOS/componentes/EJ12/servicios/posts/getAllPosts';
+import Post from './componentes/Post'
+import { getAllPosts } from './servicios/posts/getAllPosts';
 
 function App() {
 
@@ -21,7 +21,9 @@ function App() {
           //Cargamos los post en el estado del componente
           //y ponemos el estado de cargando a false
           setListaPost(posts);
-          setCargando(false);
+          setTimeout(() => {
+            setCargando(false);
+          }, 1000);
         });                    
   }
 
