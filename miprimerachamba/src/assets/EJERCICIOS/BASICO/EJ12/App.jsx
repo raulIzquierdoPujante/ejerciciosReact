@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Post from './componentes/Post'
 import { getAllPosts } from './servicios/posts/getAllPosts';
+import AjaxLoader from './componentes/AjaxLoader';
+
 
 function App() {
 
@@ -21,9 +23,7 @@ function App() {
           //Cargamos los post en el estado del componente
           //y ponemos el estado de cargando a false
           setListaPost(posts);
-          setTimeout(() => {
             setCargando(false);
-          }, 1000);
         });                    
   }
 
@@ -45,7 +45,7 @@ function App() {
         <h1>Post</h1>
         {cargando 
         ? 
-        <div>Cargando...</div> 
+        <AjaxLoader></AjaxLoader> 
         : 
         <ul>                        
         {listaPost.map(muestraPost)}

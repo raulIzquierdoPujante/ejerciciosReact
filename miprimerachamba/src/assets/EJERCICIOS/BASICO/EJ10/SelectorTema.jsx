@@ -11,8 +11,6 @@ const SelectorTema = (props) => {
 
         // A través de la función que recibe el componente como props, devolvemos el tema seleccionado
         // al componente padre para que lo modifique en el contexto y llegue a todos los consumidores 
-        // de dicho
-        //Con est
         props.manejarSeleccion(event.target.value);        
         setTemaSeleccionado(event.target.value);
 

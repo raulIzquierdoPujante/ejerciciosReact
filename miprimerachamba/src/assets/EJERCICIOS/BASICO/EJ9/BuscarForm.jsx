@@ -2,9 +2,6 @@ import { useState } from "react";
 
 const BuscarForm = (props) => {
 
-   
-    
-
     // Usamos el hook userState para gestionar el estado del componente
     const [nuevaBusqueda, setnuevaBusqueda] = useState("");
 
